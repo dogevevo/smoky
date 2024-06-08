@@ -1,0 +1,71 @@
+use smokymountaincup2024; 
+
+CREATE TABLE Equipos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL,
+    estado VARCHAR(50) NOT NULL,
+    categoria ENUM('Premier', 'Primera', 'Femenil') NOT NULL
+);
+
+/* INSERTAR EQUIPOS DE CATEGORIA PREMIER */
+INSERT INTO Equipos (nombre, estado, categoria) VALUES
+('Boca Junior', 'Norte Carolina', 'Premier'),
+('Bronco Salibury', 'Norte Carolina', 'Premier'),
+('LTB', 'Norte Carolina', 'Premier'),
+('11 Gargolas', 'Tennessee', 'Premier'),
+('Kingdoms', 'Georgia', 'Premier'),
+('Cortijo', 'Tennessee', 'Premier'),
+('Veracruz', 'Norte Carolina', 'Premier'),
+('Charlestown', 'Sur Carolina', 'Premier'),
+('Cruz Azul', 'Tennessee', 'Premier'),
+('Catrachos', 'Tennessee', 'Premier'),
+('Olimpia', 'Tennessee', 'Premier'),
+('C. America', 'Tennessee', 'Premier'),
+('?', 'Tennessee', 'Premier'),
+('?', 'Tennessee', 'Premier'),
+('Real Concepcion', 'Norte Carolina', 'Premier'),
+('Toros Malateco', '?', 'Premier'),
+('Estrella Juvenil', 'Tennessee', 'Premier');
+
+SELECT  * FROM Equipos; 
+
+/* INSERTAR EQUIPOS DE CATEGORIA PRIMERA */
+INSERT INTO Equipos (nombre, estado, categoria) VALUES
+('Manchester', 'Tennessee', 'Primera'),
+('Alcolicos', 'Tennessee', 'Primera'),
+('Deportivo Trujillo', 'Georgia', 'Primera'),
+('Olimpia', 'Georgia', 'Primera'),
+('Gatlinburg', 'Tennessee', 'Primera'),
+('Chelsea', 'Tennessee', 'Primera'),
+('Jalico', 'Tennessee', 'Primera'),
+('AC Milan', 'Tennessee', 'Primera'),
+('Forex', 'Georgia', 'Primera');
+
+
+SHOW TABLES;
+SHOW COLUMNS FROM equipos;
+
+
+/* INSERTAR EQUIPOS DE CATEGORIA FEMENIL*/
+INSERT INTO Equipos (nombre, estado, categoria) VALUES
+('Nueva Generacion', 'Atlanta', 'Femenil'),
+('CLT', 'Norte Carolina', 'Femenil'),
+('Tottenham', 'Norte Carolina', 'Femenil'),
+('CD Vista Hermosa', 'Tennessee', 'Femenil'),
+('Zacatecas', 'Atlanta', 'Femenil'),
+('United', 'Washington', 'Femenil'),
+('Jalico', 'Tennessee', 'Femenil'),
+('Tennessee', 'Tennessee', 'Femenil'),
+('CCA', 'Alabama', 'Femenil');
+
+SELECT * FROM Equipos;
+SHOW TABLE Equipos;
+
+select * from Equipos
+where categoria='Femenil';
+
+select * from Equipos
+where categoria='Premier';
+
+select * from Equipos
+where categoria='Primera';
